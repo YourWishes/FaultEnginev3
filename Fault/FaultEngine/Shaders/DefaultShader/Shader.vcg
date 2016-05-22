@@ -1,0 +1,24 @@
+void main(
+	float4 in a_Position  : POSITION,
+	float2 in a_TexCoord  : TEXCOORD0,
+	
+	float4 out v_Position : POSITION,
+	float2 out v_TexCoord : TEXCOORD0,
+	float4 out w_Vertex : TEXCOORD2,
+	float4 out w_Position : TEXCOORD3,
+	
+	uniform float4x4 u_ModelViewMatrix,
+	uniform float4x4 u_ProjectionMatrix,
+	uniform float4x4 u_PositionMatrix
+) {
+	float4 position = a_Position;
+	position = mul(position, u_PositionMatrix);
+	position = mul(position, u_ModelViewMatrix);
+	w_Vertex = position;
+	
+	position = mul(position, u_ProjectionMatrix);
+	
+	v_Position = position;
+	w_Position = position;
+	v_TexCoord  = a_TexCoord;
+}

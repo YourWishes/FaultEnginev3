@@ -1,0 +1,41 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Resources\ResourceList.xml">
+    <Files>
+      <File FileName="Resources\ResourceList.xml" Line="26" Column="72" />
+      <File FileName="Entity\LivingEntity\BipedEntity\BipedEntity.cs" Line="98" Column="16" />
+      <File FileName="AppMain.cs" Line="18" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Fault" expanded="True">
+            <Node name="Entity" expanded="True">
+              <Node name="LivingEntity" expanded="True">
+                <Node name="BipedEntity" expanded="True" />
+                <Node name="Death" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="Loading" expanded="True" />
+            <Node name="Resources" expanded="True">
+              <Node name="ResourceList.xml" selected="True" />
+            </Node>
+            <Node name="Scenes" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>Instance</Value>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

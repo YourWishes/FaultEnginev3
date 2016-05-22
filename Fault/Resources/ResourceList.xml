@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+	<!-- Languages -->
+	<languages>
+		<language file="Languages/en-US.xml" name="en-US" />
+	</languages>
+	
+	<!-- Models  -->
+	<models>
+		<model file="Models/Entity/LivingEntity/BipedEntity/Biped.obj" name="Biped" />
+		<model file="Models/Styles/Clothes/armour0.obj" name="Armour0" />
+		<model file="Models/Styles/HairStyles/boy0.obj" name="Boy0_Hair" />
+		<model file="Models/Styles/Hats/helmet0.obj" name="Helmet0" />
+		
+		<model file="Models/Entity/Scenery/Chest.obj" name="Chest" />
+		<model file="Models/Entity/Scenery/Sign.obj" name="Sign" />
+	</models>
+	
+	<!-- Textures -->
+	<textures>
+		<texture file="Textures/Entity/LivingEntity/BipedEntity/DefaultFace.png" name="DefaultFace" />
+	</textures>
+	
+	<!-- Animations -->
+	<animations>
+		<animation file="Animations/Biped/Breathing.fa" name="BipedBreathing" />
+	</animations>
+	
+	<!-- Sounds/Music -->
+	
+	<!-- Background Music -->
+	
+	<!-- Scenes -->
+</resources>

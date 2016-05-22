@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F6E94F96-9D12-49DD-8F79-B1C66436E4C6}</ProjectGuid>
+    <ProjectTypeGuids>{69878862-DA7D-4DC6-B0A1-50D8FAB4242F};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Fault</RootNamespace>
+    <AssemblyName>Fault</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Sce.PlayStation.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <PsmMetadata Include="app.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </PsmMetadata>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Sce\Sce.Psm.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="FaultEngine\Animation\Animation.cs" />
+    <Compile Include="FaultEngine\Camera\Camera.cs" />
+    <Compile Include="FaultEngine\Camera\FreeCamera.cs" />
+    <Compile Include="FaultEngine\Chat\ChatMessage.cs" />
+    <Compile Include="FaultEngine\Chat\Chat.cs" />
+    <Compile Include="FaultEngine\Chat\Talkable.cs" />
+    <Compile Include="FaultEngine\Chat\InformationGiver.cs" />
+    <Compile Include="FaultEngine\Collision\Bounding.cs" />
+    <Compile Include="FaultEngine\Collision\BoundingBox.cs" />
+    <Compile Include="FaultEngine\Collision\BoundingBoxSet.cs" />
+    <Compile Include="FaultEngine\Collision\CollisionListener.cs" />
+    <Compile Include="FaultEngine\Color\Color.cs" />
+    <Compile Include="FaultEngine\Controller\Controller.cs" />
+    <Compile Include="FaultEngine\Display\DisplayManager.cs" />
+    <Compile Include="FaultEngine\Display\ThreadSafeFrameBuffer.cs" />
+    <Compile Include="FaultEngine\Display\ThreadSafeDepthBuffer.cs" />
+    <Compile Include="FaultEngine\Entity\Entity.cs" />
+    <Compile Include="FaultEngine\Entity\EntityType.cs" />
+    <Compile Include="FaultEngine\Game\Game.cs" />
+    <Compile Include="FaultEngine\Game\GameLogger.cs" />
+    <Compile Include="FaultEngine\Game\GameSettings.cs" />
+    <Compile Include="FaultEngine\Game\SettingValue.cs" />
+    <Compile Include="FaultEngine\Light\Light.cs" />
+    <Compile Include="FaultEngine\Location\Locateable.cs" />
+    <Compile Include="FaultEngine\Location\Location.cs" />
+    <Compile Include="FaultEngine\Material\Material.cs" />
+    <Compile Include="FaultEngine\Model\Face.cs" />
+    <Compile Include="FaultEngine\Model\Model.cs" />
+    <Compile Include="FaultEngine\Model\TextureCoordinate.cs" />
+    <Compile Include="FaultEngine\Model\VBO.cs" />
+    <Compile Include="FaultEngine\Model\Vertice.cs" />
+    <Compile Include="FaultEngine\Model\Loader\ModelLoader.cs" />
+    <Compile Include="FaultEngine\Model\Loader\WavefrontLoader.cs" />
+    <Compile Include="FaultEngine\Primitive\Quad.cs" />
+    <Compile Include="FaultEngine\Primitive\Triangle.cs" />
+    <Compile Include="FaultEngine\Scene\Scene.cs" />
+    <Compile Include="FaultEngine\Shaders\ShaderList.cs" />
+    <Compile Include="FaultEngine\Sound\BackgroundMusic.cs" />
+    <Compile Include="FaultEngine\Sound\Music.cs" />
+    <Compile Include="FaultEngine\Sprite\FontModel.cs" />
+    <Compile Include="FaultEngine\Sprite\Sprite.cs" />
+    <Compile Include="FaultEngine\UI\GUI.cs" />
+    <Compile Include="FaultEngine\UI\GUIElement.cs" />
+    <Compile Include="FaultEngine\UI\Input\InputElement.cs" />
+    <Compile Include="FaultEngine\UI\Input\Button\Button.cs" />
+    <Compile Include="FaultEngine\UI\Input\Button\TestingButton.cs" />
+    <Compile Include="FaultEngine\Utils\FileUtilities.cs" />
+    <Compile Include="FaultEngine\Utils\MathUtils.cs" />
+    <Compile Include="FaultEngine\Utils\StringUtils.cs" />
+    <Compile Include="FaultEngine\Utils\TimeUtils.cs" />
+    <Compile Include="FaultEngine\Material\Texture\LoadableTexture.cs" />
+    <Compile Include="Scenes\InitialScene.cs" />
+    <Compile Include="Loading\Resource\Resource.cs" />
+    <Compile Include="Loading\Resource\ResourceType.cs" />
+    <Compile Include="Loading\LoadingScene.cs" />
+    <Compile Include="Entity\LivingEntity\BipedEntity\BipedEntity.cs" />
+    <Compile Include="FaultEngine\Item\Item.cs" />
+    <Compile Include="FaultEngine\Item\InventoryHolder.cs" />
+    <Compile Include="FaultEngine\Item\ItemType.cs" />
+    <Compile Include="FaultEngine\Item\Inventory.cs" />
+    <Compile Include="FaultEngine\Item\ItemCategory.cs" />
+    <Compile Include="FaultEngine\Item\ArmouredInventory.cs" />
+    <Compile Include="Entity\LivingEntity\BipedEntity\Styles\BipedExpression.cs" />
+    <Compile Include="Entity\LivingEntity\BipedEntity\Styles\ClothesStyle.cs" />
+    <Compile Include="Entity\LivingEntity\BipedEntity\Styles\DressElement.cs" />
+    <Compile Include="Entity\LivingEntity\BipedEntity\Styles\HairStyle.cs" />
+    <Compile Include="Entity\LivingEntity\BipedEntity\Styles\HelmetStyle.cs" />
+    <Compile Include="Entity\LivingEntity\Death\DeathCause.cs" />
+    <Compile Include="AppMain.cs" />
+    <Compile Include="Entity\FaultEntityType.cs" />
+    <Compile Include="FaultEngine\Animation\Rule\AnimationRule.cs" />
+    <Compile Include="FaultEngine\Animation\Rule\AnimationFramingType.cs" />
+    <Compile Include="FaultEngine\Animation\Loader\AnimationLoader.cs" />
+    <Compile Include="FaultEngine\Animation\Loader\LoadedAnimationRules.cs" />
+    <Compile Include="Entity\LivingEntity\BipedEntity\LivingEntity.cs" />
+    <Compile Include="FaultEngine\Language\Language.cs" />
+    <Compile Include="FaultEngine\Language\LanguageObject.cs" />
+    <Compile Include="FaultEngine\Language\Region.cs" />
+    <Compile Include="FaultEngine\Language\Loader\LanguageLoader.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="FaultEngine\" />
+    <Folder Include="FaultEngine\Scene\" />
+    <Folder Include="Scenes\" />
+    <Folder Include="FaultEngine\Material\Texture\" />
+    <Folder Include="Resources\" />
+    <Folder Include="Resources\Languages\" />
+    <Folder Include="Loading\" />
+    <Folder Include="Loading\Resource\" />
+    <Folder Include="FaultEngine\Shaders\Sprite\" />
+    <Folder Include="Resources\Models\" />
+    <Folder Include="Resources\Models\Entity\" />
+    <Folder Include="Resources\Models\Entity\LivingEntity\" />
+    <Folder Include="Resources\Models\Entity\LivingEntity\BipedEntity\" />
+    <Folder Include="Resources\Models\Entity\Scenery\" />
+    <Folder Include="Resources\Textures\" />
+    <Folder Include="Resources\Textures\Entity\" />
+    <Folder Include="Resources\Textures\Entity\LivingEntity\" />
+    <Folder Include="Resources\Textures\Entity\LivingEntity\BipedEntity\" />
+    <Folder Include="Resources\Textures\Entity\LivingEntity\BipedEntity\Faces\" />
+    <Folder Include="Entity\" />
+    <Folder Include="Entity\LivingEntity\" />
+    <Folder Include="Entity\LivingEntity\BipedEntity\" />
+    <Folder Include="FaultEngine\Item\" />
+    <Folder Include="Entity\LivingEntity\BipedEntity\Styles\" />
+    <Folder Include="Entity\LivingEntity\Death\" />
+    <Folder Include="FaultEngine\Animation\Rule\" />
+    <Folder Include="FaultEngine\Animation\Loader\" />
+    <Folder Include="Resources\Animations\" />
+    <Folder Include="Resources\Animations\Biped\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ShaderProgram Include="FaultEngine\Shaders\DefaultShader\Shader.fcg" />
+    <ShaderProgram Include="FaultEngine\Shaders\DefaultShader\Shader.vcg" />
+    <ShaderProgram Include="FaultEngine\Shaders\Sprite\Sprite.fcg" />
+    <ShaderProgram Include="FaultEngine\Shaders\Sprite\Sprite.vcg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\ResourceList.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Languages\en-US.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Models\Entity\LivingEntity\BipedEntity\Biped.obj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Models\Entity\Scenery\Chest.obj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Models\Entity\Scenery\Sign.obj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Models\Styles\Clothes\armour0.obj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Models\Styles\HairStyles\boy0.obj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Models\Styles\Hats\helmet0.obj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Textures\Entity\LivingEntity\BipedEntity\DefaultFace.png" />
+    <Content Include="Resources\Animations\Biped\Breathing.fa">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>
